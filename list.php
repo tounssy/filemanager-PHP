@@ -1,17 +1,19 @@
 <?php  
-    $media= dir('./');
-    $tableau = array();
+
+    // $media= dir('./');
+    // $tableau = array();
     
-    while($entry = $media->read()) { 
-        $tableau[] = $entry; 
+    // while($entry = $iterator->read()) { 
+    //     $tableau[] = $entry; 
+    // }    
+    // $iterator->close();
+    // echo json_encode($tableau);
+    $iterator = new DirectoryIterator(dirname(__FILE__));
+foreach ($iterator as $fileinfo) {
+    if ($fileinfo->isDir()) {
+       echo $fileinfo->getFilename() . "<br/>\n";
     }
-
-    //Fais quelque chose foutu AJAXJSONJESAISPLUSQUITUES
-
-//$_GET à faire pour
-
-    $media->close();
-    echo json_encode($tableau);
-   
-
+    if ($fileinfo->isFile()) {
+        echo $fileinfo->getFilename() . " " . $fileinfo->getSize() . "<br/>\n";
+    }}
 ?>
