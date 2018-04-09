@@ -18,7 +18,7 @@
         var initElem = e.target.tagName; 
         console.log(e.target.tagName);
        })
-}
+
 
    
 
