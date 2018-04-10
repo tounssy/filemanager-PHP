@@ -1,29 +1,39 @@
-@media (max-width: 640px) {
 body{
     background-color: rgb(0, 0, 14);
 }
 h1{
     color: white;
     text-align: center;
+    font-family: fantasy;
+    font-size: 35px;
 }
+@media (max-width: 640px) {
+
 span{
     color: yellow;
+    font-size: 20px;
+    font-family: fantasy;
+    
 }
 .precedent{
-    display:block;
+    display: block;
     font-size: 0px;
     background-image:url("precedent.png");
     background-size: 100%;
     background-repeat: no-repeat;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
+
 }
 .dossier{  
     text-align: center;
     color: white;
     text-transform: uppercase;
     font-size:20px;
-    text-decoration: none;
+    font-family: fantasy;
+       text-decoration: none;
+    width: 60px;
+    height: 60px;
 
 
 }
@@ -38,4 +48,41 @@ span{
 
 
 }
+}
+@media (min-width: 1200px) {
+    span{
+        color: yellow;
+        font-size: 25px;
+        font-family: fantasy;
+    }
+    .precedent{
+        display: block;
+        font-size: 0px;
+        background-image:url("precedent.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 60px;
+    }
+    .dossier{  
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size:20px;
+        font-family: fantasy;
+        text-decoration: none;
+        width: 60px;
+        height: 60px;
+    
+    
+    }
+    .image{
+        display: block;
+        background-image:url("dossier.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 60px;  
+        margin-top: 30px; 
+    }
 }
