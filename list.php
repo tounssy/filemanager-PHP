@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-
-
-    <?php
-
-
-    $iterator= new DirectoryIterator;
-    $media = './';
-    
-/*     while($entry = $media->read()) { 
-        $tableau[] = $entry; 
-    }
-
-
-//$_GET à faire pour
-
-    $media->close();
-    echo json_encode($tableau); */
-
-    while($media->valid()) {
-        $file = $media->current();
-        echo $media->key() . " => " . $file->getFilename() . "\n";
-        $iterator->next();
-    }
-    
-   
-?>
-=======
 <?php  
 
 $dossier = './'; // Ici j'appelle mon dossier.
@@ -53,10 +25,29 @@ foreach($iterator as $fichier){
        echo 'Extension du fichier:  '.$fichier->getExtension().'<br>';
        echo 'Modifié le :  '.$fichier->getMTime().'<br>';
 
+    } else {
+        echo '<a href="#">' .$fichier->getFilename() .'</a><br>';
+    }
+ }
+ 
+/* $dossier = $_REQUEST["dossier"];
+$fichier = "";
+
+ if($dossier !== "") {
+     $dossier = strtolower($dossier);
+     $len=strlen($dossier);
+    foreach($fichier as $name) {
+        if(stristr($dossier, substr($name, 0, $len))) {
+            if ($fichier === "") {
+                $fichier = $name;
+            } else {
+                $fichier.= ", $name";
+            }
+        }
     }
  }
 
-
+ echo $fichier === ""? "no suggestion" : $fichier; */
 
 
 // $dossier = new DirectoryIterator ('./');
@@ -116,4 +107,3 @@ foreach($iterator as $fichier){
     // echo json_encode($tableau);
    
 ?>
->>>>>>> 97cf3aafc6f263091c90a6a5932b4423ef467f21
