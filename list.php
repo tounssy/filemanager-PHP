@@ -40,13 +40,9 @@ foreach($iterator as $fichier){
                 echo '<a href="#" class="precedent url">'.$fichier->getFilename().'</a> <br>';
             }
             else {
-                echo '<a href="#" class="dossier url"><img class="image">'.$fichier->getFilename().'</a><br>';
-            }
-        }
-        
+                echo '<a href="#" class="dossier url"><img href="#" class="image">'.$fichier->getFilename().'</a><br>';
     }
  }
- 
+}} 
 // include ('test.php'); //test include
-
 ?>
