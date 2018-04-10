@@ -25,12 +25,13 @@ foreach($iterator as $fichier){
 
     // La fonction isDot retourne TRUE si l'élement courant est "." ou ".."
    if(!$fichier->isDir()){ // Si ce n'est pas un dossier
-       echo 'Nom du document: '.$fichier->getFilename().'<br>';
-       echo 'Taille du document en octets:  '.$fichier->getSize().'<br>';
-       echo 'Type de document (file, dir ou link):  '.$fichier->getType().'<br>';
-       echo 'Extension du fichier:  '.$fichier->getExtension().'<br>';
+    //    echo '<br>----------<br>Nom du document: '.$fichier->getFilename(). '<br>';
+       echo $fichier->getFilename().'<br>' ;
+    //    echo 'Taille du document en octets:  '.$fichier->getSize().'<br>';
+    //    echo $fichier->getSize().' octets <br>';
+    //    echo 'Type de document (file, dir ou link):  '.$fichier->getType().'<br>';
+    //    echo 'Extension du fichier:  '.$fichier->getExtension().'<br>';
     //    echo 'Modifié le :  '.$fichier->getMTime().'<br>';
-
     }
 
     else {

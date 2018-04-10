@@ -1,0 +1,19 @@
+body {
+    background-color: #191627;
+    /* background-image: url("./media/background5.png"); */
+    /* background-size : 100%; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;   
+    /* width: 100%;
+    height: 100%; */
+    color: #e5c25e;
+}
+
+h1 {
+    color: #e5c25e;
+}
+
+#fileContent {
+    /* background-color : white; */
+    border: solid 1px #9c89f0;
+}
