@@ -34,13 +34,19 @@ foreach($iterator as $fichier){
     //    echo 'Modifié le :  '.$fichier->getMTime().'<br>';
     }
 
-    else {
+    else {        
         if ($fichier->getFilename()!=='.' ){ // Si le nom du fichier est différent de '.' (pour éffacer le '.' qu'on avait dans notre explorateur)
-            echo '<a href="#">'.$fichier->getFilename().'</a> <br>';
+            if ($fichier->getFilename()=='..' ){ // Si le nom du fichier est différent de '.' (pour éffacer le '.' qu'on avait dans notre explorateur)
+                echo '<a href="#" class="precedent url">'.$fichier->getFilename().'</a> <br>';
+            }
+            else {
+                echo '<a href="#" class="dossier url"><img class="image">'.$fichier->getFilename().'</a><br>';
+            }
         }
+        
     }
  }
-
+ 
 // include ('test.php'); //test include
 
 ?>
