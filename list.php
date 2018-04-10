@@ -31,6 +31,25 @@ foreach($iterator as $fichier){
     //    echo 'Extension du fichier:  '.$fichier->getExtension().'<br>';
     //    echo 'Modifié le :  '.$fichier->getMTime().'<br>';
 
+    } else {
+        echo '<a href="#">' .$fichier->getFilename() .'</a><br>';
+    }
+ }
+ 
+/* $dossier = $_REQUEST["dossier"];
+$fichier = "";
+
+ if($dossier !== "") {
+     $dossier = strtolower($dossier);
+     $len=strlen($dossier);
+    foreach($fichier as $name) {
+        if(stristr($dossier, substr($name, 0, $len))) {
+            if ($fichier === "") {
+                $fichier = $name;
+            } else {
+                $fichier.= ", $name";
+            }
+        }
     }
 
     else {        
