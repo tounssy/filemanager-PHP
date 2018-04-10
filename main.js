@@ -31,14 +31,14 @@ var dossierEx = document.getElementById("fileContent"); //Ici on recupère la di
             var xhr = new XMLHttpRequest();
 
             // On souhaite juste récupérer le contenu du fichier, la méthode GET suffit amplement :
-            xhr.open('GET', 'list.php?dossier=./'+ event.target.innerText + '/');
+            xhr.open('GET', 'list.php?dossier=./'+ event.target.innerText + '../');
         
             xhr.addEventListener('readystatechange', function() { // On gère ici une requête asynchrone
                 if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) { // Si le fichier est chargé sans erreur
         
                     document.getElementById('fileContent').innerHTML = '<span>' + xhr.responseText + + '</span>'; // Et on affiche !
                 }
-        
+                        
             });
         
             xhr.send(null);
